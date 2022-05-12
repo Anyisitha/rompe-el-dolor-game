@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuracion</title>
+    <script src="../../helpers/jquery.min.js"></script>
+    <script src="../../helpers/responsive.js"></script>
+    <script src="../../helpers/app.js"></script>
+
+    <link rel="stylesheet" href="../animate.compat.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./settings.css">
+</head>
+
+<body class="ancho back">
+    <section class="screen back" id="settings">
+        <div class="abs back title animated fadeInDown"></div>
+        <form class="abs">
+            <div class="abs back farmacia-text"></div>
+            <input class="abs farmacia-input" autocomplete="off" type="text" name="new-farmacia" id="new-farmacia" pattern=".[a-zA-Z ]+" required>
+
+            <div class="abs back email-text"></div>
+            <input class="abs email-input" autocomplete="off" placeholder="email@ejemplo.com" type="email" name="new-email" id="new-email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required>
+
+            <div class="abs back phone-text"></div>
+            <input class="abs phone-input" autocomplete="off" type="text" name="new-phone" id="new-phone" pattern="[0-9]+" required>
+
+            <div class="abs back name-text"></div>
+            <input class="abs name-input" autocomplete="off" type="text" name="new-name" id="new-name" pattern=".[a-zA-Z ]+" required>
+            
+            <div class="abs back save-info" id="update-data"></div>
+
+            <!-- LOADER -->
+            <div class="loader abs">
+                <div class="loader-wheel"></div>
+            </div>
+        </form>
+
+        <div class="abs back user-icon"></div>
+        <div class="abs back" id="user-name"></div>
+        <div class="abs back settings-icon"></div>
+        <a href="../menu/index.html">
+            <div class="abs back home-icon"></div>
+        </a>
+        <a href="../info/index.html">
+            <div class="abs back info-icon"></div>
+        </a>
+        
+        <div class="abs back exit-icon" id="logOut"></div>
+    </section>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem('data'));
+        const name = data.name.split(' ')[0];
+        const lastName = data.name.split(' ')[1];
+        const pharmacy = data.pharmacy;
+        const phone = data.phone;
+        const email = data.email;
+
+        $('#user-name').html(name + '<br>' + lastName);
+
+        $('#new-farmacia').val(pharmacy);
+        $('#new-email').val(email);
+        $('#new-phone').val(phone);
+        $('#new-name').val(name + ' ' + lastName);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+{
+  "appId": "com.rompedolor.app",
+  "appName": "rompe dolor",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

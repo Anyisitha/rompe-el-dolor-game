@@ -1,0 +1,36 @@
+#policy {
+    /* display: none; */
+    background-image: url(../../assets/images/info-bc.png);
+}
+
+#policy .title {
+    top: 12%;
+    left: 25%;
+    width: 52%;
+    height: 8%;
+    background-image: url(../../assets/images/privacy-title.png);
+}
+
+#policy .policy-text {
+    top: 24%;
+    left: 17%;
+    width: 67%;
+    height: 43%;
+    background-image: url(../../assets/images/privacy-text.png);
+}
+
+#policy .btn {
+    top: 70%;
+    width: 20%;
+    height: 8%;
+}
+
+#policy .back-btn {
+    left: 26%;
+    background-image: url(../../assets/images/back-btn.png);
+}
+
+#policy #accept-btn {
+    left: 54%;
+    background-image: url(../../assets/images/accept-btn.png);
+}

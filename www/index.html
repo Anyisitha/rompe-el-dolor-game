@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <script src="./helpers/jquery.min.js"></script>
+    <script src="./helpers/responsive.js"></script>
+    <script src="./helpers/app.js"></script>
+
+    <link rel="stylesheet" href="./views/animate.compat.css">
+    <link rel="stylesheet" href="./views/style.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body class="ancho back">
+    <section class="screen back" id="main">
+        <div class="abs back text animated fadeInLeft"></div>
+        <div class="abs back register-btn main-btn" id="to-register"></div>
+        <div class="abs back login-btn main-btn" id="to-login"></div>
+        <a href="./views/policy/index.html" class="abs back privacy-btn">
+            <input type="checkbox">
+            <label for="" class="abs back condiciones">Acepto los términos de condiciones y políticas de privacidad</label>
+            <!-- <div class=" "></div> -->
+        </a>
+    </section>
+
+    <!-- * LOGIN SCREEN  -->
+    <section class="screen back" id="login">
+        <div class="abs back title animated fadeInDown"></div>
+        <form class="abs">
+            <div class="abs back text"></div>
+            <input class="abs" type="text" name="login-name" id="login-name" pattern=".[a-zA-Z ]+" required>
+            <div class="abs back continue" id="submit-login"></div>
+
+            <!-- LOADER -->
+            <div class="loader abs">
+                <div class="loader-wheel"></div>
+            </div>
+        </form>
+    </section>
+
+    <!-- * REGISTER SCREEN  -->
+    <section class="screen back" id="register">
+        <div class="abs back title animated fadeInDown"></div>
+        <form class="abs">
+            <div class="abs back farmacia-text"></div>
+            <input class="abs farmacia-input" autocomplete="off" type="text" name="farmacia" id="farmacia"
+                pattern=".[a-zA-Z ]+" required>
+
+            <div class="abs back email-text"></div>
+            <input class="abs email-input" autocomplete="off" placeholder="email@ejemplo.com" type="email" name="email"
+                id="email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required>
+
+            <div class="abs back phone-text"></div>
+            <input class="abs phone-input" autocomplete="off" type="text" name="phone" id="phone" pattern="[0-9]+"
+                required>
+
+            <div class="abs back name-text"></div>
+            <input class="abs name-input" autocomplete="off" type="text" name="register-name" id="register-name"
+                pattern=".[a-zA-Z ]+" required>
+
+            <div class="abs back save-info" id="register-btn"></div>
+
+            <!-- LOADER -->
+            <div class="loader abs">
+                <div class="loader-wheel"></div>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

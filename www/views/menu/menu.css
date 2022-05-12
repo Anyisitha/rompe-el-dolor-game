@@ -1,0 +1,74 @@
+#menu {
+    background-image: url(../../assets/images/menu-bc.png);
+}
+
+#menu .loader {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7%;
+    height: 9.5%;
+}
+
+.loader-wheel {
+    animation: spin 1s infinite linear;
+    border: 2px solid rgba(30, 30, 30, 0.5);
+    border-left: 4px solid #513283;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes load {
+    0% {
+      content: 'Loading';
+    }
+    33% {
+      content: 'Loading.';
+    }
+    67% {
+      content: 'Loading..';
+    }
+    100% {
+      content: 'Loading...';
+    }
+  }
+
+#menu .menu-item {
+    display: none;
+    top: 36%;
+    width: 20%;
+    height: 38%;
+}
+
+#menu #to-level-1 {
+    left: 15%;
+    background-image: url(../../assets/images/menu-item-1.png);
+    animation-delay: 0.2s;
+}
+
+#menu #to-level-2 {
+    left: 39.5%;
+    background-image: url(../../assets/images/menu-item-2.png);
+    animation-delay: 0.5s;
+}
+
+#menu #to-level-3 {
+    left: 64%;
+    background-image: url(../../assets/images/menu-item-3.png);
+    animation-delay: 0.8s;
+}
+
+#menu .locked {
+    opacity: 0.5;
+}

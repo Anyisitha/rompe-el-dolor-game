@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Level 1</title>
+    <script src="../../helpers/jquery.min.js"></script>
+    <script src="../../helpers/responsive.js"></script>
+    <script src="../../helpers/app.js"></script>
+    <script type='text/javascript' src='../../controllers/level1/bubbleshooter.js'></script>
+
+    <link rel="stylesheet" href="../animate.compat.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./level1.css">
+</head>
+
+<body class="ancho">
+    <section class="screen back" id="level-1">
+        <!-- * CONTADOR -->
+        <div class="abs wrapper counter-wrapper">
+            <div class="abs back portada-level-1"></div>
+            <div class="abs back number-wrapper" id="counter-level-1">
+                <div class="abs back number number-1 animated flipInY"></div>
+                <div class="abs back number number-2 animated flipInY"></div>
+                <div class="abs back number number-3 animated flipInY"></div>
+            </div>
+
+            <div class="abs back go-text animated zoomIn"></div>
+        </div>
+
+        <!-- * JUEGO -->
+        <div class="abs wrapper game-wrapper">
+            <canvas id="viewport" width="550" height="460"></canvas>
+
+            <!-- ? PAIN IMAGE -->
+            <div class="pain-image-level-1 abs back"></div>
+
+            <!-- ? INFO POP -->
+            <div class="abs back" id="info-pop">
+                <div class="abs back animated zoomIn" id="info-content"></div>
+                <div class="abs back animated fadeIn" id="continue"></div>
+            </div>
+
+            <!-- ? UI OBJECTS -->
+            <div class="abs back berifen-logo"></div>
+            <div class="abs shoots">
+                <span id="shoots-counter">
+
+                </span>
+                <p>Tiros <br> disponibles</p>
+            </div>
+
+            <audio src="../../assets/audio/subir-nivel.mp3" id="audiocard"></audio>
+
+            <audio src="../../assets/audio/perder-nivel.mp3" id="audiocard1"></audio>
+
+            <audio src="../../assets/audio/kart1-mario-kart.mp3" id="audiocard2"></audio>
+        </div>
+
+        <!-- * RESULTADO -->
+        <div class="abs wrapper result-wrapper">
+            <div class="abs back win-pop win-pop-1 animated zoomIn">
+                <div class="abs back retry retry-blue animated fadeInLeft"></div>
+                <div class="abs back continue animated fadeInLeft"></div>
+            </div>
+            <div class="abs back lose-pop animated shakeX">
+                <div class="abs back retry retry-btn animated fadeInLeft"></div>
+            </div>
+
+            <div class="abs back references">
+                <div class="abs back exit-btn animated fadeInLeft" id="unlock-level-2"></div>
+            </div>
+        </div>
+
+        <div class="abs back user-icon"></div>
+        <div class="abs back" id="user-name"></div>
+        <a href="../settings/index.html">
+            <div class="abs back settings-icon"></div>
+        </a>
+        <a href="../menu/index.html">
+            <div class="abs back home-icon"></div>
+        </a>
+        <a href="../info/index.html">
+            <div class="abs back info-icon"></div>
+        </a>
+        <div class="abs back exit-icon" id="logOut"></div>
+    </section>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem('data'));
+        const name = data.name.split(' ')[0];
+        const lastName = data.name.split(' ')[1];
+
+        $('#user-name').html(name + '<br>' + lastName);
+    </script>
+</body>
+
+</html>

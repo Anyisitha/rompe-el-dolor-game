@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <script src="../../helpers/jquery.min.js"></script>
+    <script src="../../helpers/responsive.js"></script>
+    <script src="../../helpers/app.js"></script>
+    <script src="../../helpers/menu.js"></script>
+
+    <link rel="stylesheet" href="../animate.compat.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./menu.css">
+</head>
+
+<body class="ancho">
+    <section class="screen back" id="menu">
+
+        <!-- LOADER -->
+        <div class="loader abs">
+            <div class="loader-wheel"></div>
+        </div>
+
+        <!-- * MENU BUTTONS -->
+        <a href="../level1/index.html">
+            <div class="abs back menu-item animated zoomIn" id="to-level-1"></div>
+        </a>
+        <a class="locked">
+            <div class="abs back menu-item animated zoomIn" id="to-level-2"></div>
+        </a>
+        <a class="locked">
+            <div class="abs back menu-item animated zoomIn" id="to-level-3"></div>
+        </a>
+
+        <div class="abs back user-icon"></div>
+        <div class="abs back" id="user-name"></div>
+        <a href="../settings/index.html">
+            <div class="abs back settings-icon"></div>
+        </a>
+        <div class="abs back home-icon"></div>
+        <a href="../info/index.html">
+            <div class="abs back info-icon"></div>
+        </a>
+        <div class="abs back exit-icon" id="logOut"></div>
+    </section>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem('data'));
+        const name = data.name.split(' ')[0];
+        const lastName = data.name.split(' ')[1];
+
+        $('#user-name').html(name + '<br>' + lastName);
+    </script>
+</body>
+
+</html>

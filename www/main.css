@@ -1,0 +1,261 @@
+body {
+    background-color: #fff;
+}
+
+/* * FIRST SCREEN */
+#main {
+    background-image: url(./assets/images/main-bc.png);
+    /* display: none; */
+}
+
+#main .text {
+    top: 42%;
+    left: 20%;
+    width: 27%;
+    height: 10.5%;
+    background-image: url(./assets/images/text-first-screen.png);
+}
+
+#main .register-btn {
+    top: 36%;
+    left: 60%;
+    width: 26%;
+    height: 8.5%;
+    background-image: url(./assets/images/register-btn.png);
+}
+
+#main .login-btn {
+    top: 47%;
+    left: 60%;
+    width: 26%;
+    height: 9.5%;
+    background-image: url(./assets/images/login-btn.png);
+}
+
+#main .privacy-btn {
+    top: 58%;
+    left: 61.5%;
+    width: 24.5%;
+    height: 5%;
+    color: #2e255d;
+
+    font-size: 12px;
+}
+
+/*  * LOGIN */
+#login {
+    display: none;
+    background-image: url(./assets/images/main-bc.png);
+}
+
+#login .title {
+    top: 15%;
+    left: 29%;
+    width: 42%;
+    height: 8%;
+    background-image: url(./assets/images/login-title.png);
+}
+
+#login form {
+    /* border: 1px solid red; */
+    top: 35%;
+    left: 25%;
+    width: 50%;
+    height: 32%;
+}
+
+#login form .text {
+    top: 0;
+    left: 18%;
+    width: 36%;
+    height: 15%;
+    background-image: url(./assets/images/name-login-text.png);
+}
+
+#login form input {
+    border: none;
+    border: 1px solid #59358C;
+    border-radius: 10px;
+    padding: 3px;
+    top: 15%;
+    left: 18%;
+    font-size: 0.9em;
+    width: 65%;
+}
+
+#login form .continue {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 39%;
+    height: 21.5%;
+    background-image: url(./assets/images/continue-btn-big.png);
+}
+
+#login .loader {
+    display: none;
+    top: 80%;
+    left: 46%;
+    width: 7%;
+    height: 14.5%;
+}
+
+#login .loader-wheel {
+    animation: spin 1s infinite linear;
+    border: 2px solid rgba(30, 30, 30, 0.5);
+    border-left: 4px solid #513283;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    0% {
+        content: 'Loading';
+    }
+    33% {
+        content: 'Loading.';
+    }
+    67% {
+        content: 'Loading..';
+    }
+    100% {
+        content: 'Loading...';
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #login form input  {
+        font-size: 1.2em;
+        padding: 7px;
+    }
+}
+
+/*  * REGISTER */
+#register {
+    display: none;
+    background-image: url(./assets/images/main-bc.png);
+}
+
+#register .title {
+    top: 15%;
+    left: 29%;
+    width: 42%;
+    height: 8%;
+    background-image: url(./assets/images/register-title.png);
+}
+
+#register form {
+    /* border: 1px solid red; */
+    top: 30%;
+    left: 19%;
+    width: 62%;
+    height: 39%;
+}
+
+#register form .farmacia-text {
+    top: 0;
+    left: 0;
+    width: 36%;
+    height: 15%;
+    background-image: url(./assets/images/farmacy-name.png);
+}
+
+#register form .email-text {
+    top: 0;
+    left: 51%;
+    width: 41%;
+    height: 15%;
+    background-image: url(./assets/images/email-text.png);
+}
+
+#register form .phone-text {
+    top: 40%;
+    left: 0;
+    width: 22%;
+    height: 15%;
+    background-image: url(./assets/images/phone-text.png);
+}
+
+#register form .name-text {
+    top: 40%;
+    left: 51%;
+    width: 32%;
+    height: 15%;
+    background-image: url(./assets/images/name-login-text.png);
+}
+
+#register form input {
+    border: none;
+    border: 1px solid #59358C;
+    border-radius: 10px;
+    padding: 3px;
+    top: 15%;
+    left: 18%;
+    font-size: 0.9em;
+    width: 45%;
+}
+
+#register form .farmacia-input {
+    left: 0;
+    top: 13%;
+}
+
+#register form .email-input {
+    left: 51%;
+    top: 13%;
+}
+
+#register form .phone-input {
+    left: 0;
+    top: 52%;
+}
+
+#register form .name-input {
+    left: 51%;
+    top: 52%;
+}
+
+#register form .save-info {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 34%;
+    height: 21.5%;
+    background-image: url(./assets/images/save-btn.png);
+}
+
+#register .loader {
+    display: none;
+    top: 82%;
+    left: 46%;
+    width: 7%;
+    height: 14.5%;
+}
+
+#register .loader-wheel {
+    animation: spin 1s infinite linear;
+    border: 2px solid rgba(30, 30, 30, 0.5);
+    border-left: 4px solid #513283;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 900px) {
+    #register form input  {
+        font-size: 1.2em;
+        padding: 7px;
+    }
+}

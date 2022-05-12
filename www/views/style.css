@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+input, input:before, input:after {
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+   }
+
+html {
+    background: rgba(0, 0, 0, 255);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ancho {
+    /* width: 100vw;
+    height: calc((10 / 16) * 87vw);
+    left: calc(50% - 50vw);
+    top: calc(50% - (((10 / 16) * 87vw) / 2)); */
+    width: 100vw;
+    height: calc((10 / 14) * 104vw);
+    left: calc(50% - 50vw);
+    top: calc(50% - (((10 / 14) * 104vw) / 2));
+}
+
+.alto {
+    /* width: calc((16 / 10) * 115vh);
+    height: 100vh;
+    top: calc(50% - 50vh);
+    left: calc(50% - (((16 / 10) * 115vh) / 2)); */
+    width: calc((16 / 10) * 84vh);
+    height: 100vh;
+    top: calc(50% - 50vh);
+    left: calc(50% - (((16 / 10) * 84vh) / 2));
+}
+
+body { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 768px;
+}
+
+.screen {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    position: absolute;
+    top: 16.5%;
+    left: 4.7%;
+    height: 73.8%;
+}
+
+.abs {
+    position: absolute;
+}
+
+.back {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user-icon {
+    bottom: 0%;
+    left: 5%;
+    width: 8%;
+    height: 14%;
+    background-image: url(../assets/images/user-icon.png);
+}
+
+#user-name {
+    bottom: 4.5%;
+    left: 14%;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.settings-icon {
+    bottom: 4%;
+    left: 35%;
+    width: 5%;
+    height: 7%;
+    background-image: url(../assets/images/settings-icon.png);
+}
+
+.home-icon {
+    bottom: 2.2%;
+    left: 50%;
+    width: 5%;
+    height: 11%;
+    background-image: url(../assets/images/home-icon.png);
+}
+
+.info-icon {
+    bottom: 1.8%;
+    left: 65%;
+    width: 7%;
+    height: 12%;
+    background-image: url(../assets/images/info-icon.png);
+}
+
+.exit-icon {
+    bottom: 4.2%;
+    left: 90%;
+    width: 5%;
+    height: 7%;
+    background-image: url(../assets/images/exit-icon.png);
+}
+
+.number-wrapper {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.number {
+    top: 28%;
+    width: 26%;
+    height: 46%;
+}
+
+.number-1 {
+    left: 64%;
+    background-image: url(../assets/images/number-1.png);
+    animation-delay: 1.8s;
+}
+.number-2 {
+    left: 37%;
+    background-image: url(../assets/images/number-2.png);
+    animation-delay: 1s;
+}
+.number-3 {
+    left: 10%;
+    background-image: url(../assets/images/number-3.png);
+    animation-delay: 0.2s;
+}
+
+.go-text {
+    display: none;
+    top: 34%;
+    left: 20%;
+    width: 60%;
+    height: 30%;
+    background-image: url(../assets/images/go-text.png);
+}
+
+.win-pop {
+    display: none;
+    top: 17%;
+    left: 27%;
+    width: 45%;
+    height: 62%;
+}
+
+.win-pop .retry-blue {
+    top: 64%;
+    left: 34%;
+    width: 34%;
+    height: 7.2%;
+    background-image: url(../assets/images/retry-btn-blue.png);
+    animation-delay: 0.8s;
+}
+.win-pop .continue {
+    top: 76%;
+    left: 35%;
+    width: 32%;
+    height: 8%;
+    background-image: url(../assets/images/continue-btn.png);
+    animation-delay: 1s;
+}
+
+.lose-pop {
+    display: none;
+    top: 17%;
+    left: 27%;
+    width: 45%;
+    height: 62%;
+    background-image: url(../assets/images/lose-pop.png);
+}
+
+.retry-btn {
+    top: 75%;
+    left: 32%;
+    width: 36%;
+    height: 8%;
+    background-image: url(../assets/images/retry-btn.png);
+    animation-delay: 0.8s;
+}
+
+.references {
+    display: none;
+    top: 22%;
+    left: 18%;
+    width: 65%;
+    height: 52%;
+    background-image: url(../assets/images/references-1.png);
+}
+
+.exit-btn {
+    top: 80%;
+    left: 34%;
+    width: 28%;
+    height: 12%;
+    background-image: url(../assets/images/exit-btn.png);
+    animation-delay: 0.8s;
+}

@@ -1,0 +1,141 @@
+#settings {
+    /* display: none; */
+    background-image: url(../../assets/images/info-bc.png);
+}
+
+#settings .title {
+    top: 15%;
+    left: 29%;
+    width: 42%;
+    height: 8%;
+    background-image: url(../../assets/images/settings-title.png);
+}
+
+#settings form {
+    /* border: 1px solid red; */
+    top: 30%;
+    left: 19%;
+    width: 62%;
+    height: 39%;
+}
+
+#settings form .farmacia-text {
+    top: 0;
+    left: 0;
+    width: 36%;
+    height: 15%;
+    background-image: url(../../assets/images/farmacy-name.png);
+}
+
+#settings form .email-text {
+    top: 0;
+    left: 51%;
+    width: 41%;
+    height: 15%;
+    background-image: url(../../assets/images/email-text.png);
+}
+
+#settings form .phone-text {
+    top: 40%;
+    left: 0;
+    width: 22%;
+    height: 15%;
+    background-image: url(../../assets/images/phone-text.png);
+}
+
+#settings form .name-text {
+    top: 40%;
+    left: 51%;
+    width: 32%;
+    height: 15%;
+    background-image: url(../../assets/images/name-login-text.png);
+}
+
+#settings form input {
+    border: none;
+    border: 1px solid #59358C;
+    border-radius: 10px;
+    padding: 3px;
+    top: 15%;
+    left: 18%;
+    font-size: 0.9em;
+    width: 45%;
+}
+
+#settings form .farmacia-input {
+    left: 0;
+    top: 13%;
+}
+
+#settings form .email-input {
+    left: 51%;
+    top: 13%;
+}
+
+#settings form .phone-input {
+    left: 0;
+    top: 52%;
+}
+
+#settings form .name-input {
+    left: 51%;
+    top: 52%;
+}
+
+#settings form .save-info {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 34%;
+    height: 21.5%;
+    background-image: url(../../assets/images/save-btn.png);
+}
+
+#settings .loader {
+    display: none;
+    top: 82%;
+    left: 46%;
+    width: 7%;
+    height: 14.5%;
+}
+
+#settings .loader-wheel {
+    animation: spin 1s infinite linear;
+    border: 2px solid rgba(30, 30, 30, 0.5);
+    border-left: 4px solid #513283;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    0% {
+        content: 'Loading';
+    }
+    33% {
+        content: 'Loading.';
+    }
+    67% {
+        content: 'Loading..';
+    }
+    100% {
+        content: 'Loading...';
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #settings form input  {
+        font-size: 1.2em;
+        padding: 7px;
+    }
+}

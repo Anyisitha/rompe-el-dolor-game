@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones</title>
+    <script src="../../helpers/jquery.min.js"></script>
+    <script src="../../helpers/responsive.js"></script>
+    <script src="../../helpers/app.js"></script>
+
+    <link rel="stylesheet" href="../animate.compat.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./info.css">
+</head>
+
+<body class="ancho">
+    <section class="screen back" id="info">
+        <!-- * INSTRUCCIONES -->
+        <div class="abs back info-1 animated fadeInRight">
+            <div class="abs info-user-name">
+                <span id="big-name"></span>
+            </div>
+            <div class="abs back continue animated fadeInLeft" id="continue-1"></div>
+        </div>
+        <div class="abs back info-2 animated fadeInRight">
+            <div class="abs back continue animated fadeInLeft" id="continue-2"></div>
+        </div>
+        <div class="abs back info-3 animated fadeInRight">
+            <div class="abs back continue animated fadeInLeft" id="continue-3"></div>
+        </div>
+        <div class="abs back info-4 animated fadeInRight">
+            <div class="abs back continue animated fadeInLeft" id="continue-4"></div>
+        </div>
+        <div class="abs back info-5 animated fadeInRight">
+            <a href="../menu/index.html">
+                <div class="abs back start animated fadeInLeft" id="start-level-1"></div>
+            </a>
+        </div>
+
+        <div class="abs back user-icon"></div>
+        <div class="abs back" id="user-name"></div>
+        <a href="../settings/index.html">
+            <div class="abs back settings-icon"></div>
+        </a>
+        <a href="../menu/index.html">
+            <div class="abs back home-icon"></div>
+        </a>
+        <div class="abs back info-icon"></div>
+        <div class="abs back exit-icon" id="logOut"></div>
+    </section>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem('data'));
+        const name = data.name.split(' ')[0];
+        const lastName = data.name.split(' ')[1];
+
+        $('#user-name').html(name + '<br>' + lastName);
+        $('#big-name').text(name);
+    </script>
+</body>
+
+</html>
